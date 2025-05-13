@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -11,7 +12,11 @@ function App() {
 
   const fetchActresses = () => {
     axios.get(endpoint)
-      .then((response) => setActresses(response.data.results))
+      .then((response) => {
+        // Check if response.data exists and has the expected structure
+        const actressesData = response.data?.results || response.data || [];
+        setActresses(actressesData);
+      }) //sistemato dall'ia
       .catch((error) => console.log(`Error Fetching Actresses: ${error}`))
   }
 
