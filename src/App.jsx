@@ -33,7 +33,7 @@ function App() {
                   <img src={act.image} className='img-fluid' alt={act.name} />
                 </div>
                 <div className="act-info">
-                  <p className="act-name">{act.name}</p>
+                  <h3 className="act-name">{act.name}</h3>
                   <p className="act-birth-date">{act.birt_date}</p>
                   <p className="act-nationality">{act.nationality}</p>
                   <p className="act-bio">{act.biography}</p>
