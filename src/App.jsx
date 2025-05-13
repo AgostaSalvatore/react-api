@@ -2,17 +2,17 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 function App() {
-  const [actress, setActress] = useState([])
+  const [actresses, setActresses] = useState([])
   const endpoint = 'https://lanciweb.github.io/demo/api/actresses'
 
   useEffect(() => {
-    fetchActress()
+    fetchActresses()
   }, [])
 
-  const fetchActress = () => {
+  const fetchActresses = () => {
     axios.get(endpoint)
-      .then((response) => setActress(response.data.results))
-      .catch((error) => console.log(`Error Fetching Actress: ${error}`))
+      .then((response) => setActresses(response.data.results))
+      .catch((error) => console.log(`Error Fetching Actresses: ${error}`))
   }
 
   return (
@@ -20,11 +20,11 @@ function App() {
       <div className="container">
         <div className="row mb-4">
           <div className="col-12">
-            <h1>Actress</h1>
+            <h1>Actresses</h1>
           </div>
         </div>
         <div className="row g-3">
-          {actress.map((act) => (
+          {actresses.map((act) => (
             <div
               key={act.id}
               className="col-12 col-md-6 col-lg-4 col-xl-6">
