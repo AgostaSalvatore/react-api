@@ -17,7 +17,16 @@ function App() {
 
   return (
     <>
+      <div className="container">
+        <div className="row mb-4">
+          <div className="col-12">
+            <h1>Actress</h1>
+          </div>
+        </div>
+        <div className="row g-3">
 
+        </div>
+      </div>
     </>
   )
 }
