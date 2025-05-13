@@ -11,7 +11,7 @@ function App() {
 
   const fetchActress = () => {
     axios.get(endpoint)
-      .then((response) => console.log(response.data))
+      .then((response) => setActress(response.data.results))
       .catch((error) => console.log(`Error Fetching Actress: ${error}`))
   }
 
@@ -24,7 +24,24 @@ function App() {
           </div>
         </div>
         <div className="row g-3">
-
+          {actress.map((act) => (
+            <div
+              key={act.id}
+              className="col-12 col-md-6 col-lg-4 col-xl-3">
+              <div className="card rounded-0 d-flex">
+                <div className="act-image">
+                  <img src={act.image} className='img-fluid' alt={act.name} />
+                </div>
+                <div className="act-info">
+                  <p className="act-name">{act.name}</p>
+                  <p className="act-birth-date">{act.birt_date}</p>
+                  <p className="act-nationality">{act.nationality}</p>
+                  <p className="act-bio">{act.biography}</p>
+                  <p className="act-awards">{act.awards}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>
