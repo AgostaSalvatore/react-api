@@ -4,11 +4,10 @@ body {
 }
 .card {
     border: 1px solid #333;
-    overflow: hidden;
-    height: 210px; /* Fixed height for all cards */
-    margin-bottom: 20px;
-    display: flex;
+    height: 340px; 
+    margin-bottom: 30px;
     flex-direction: row;
+    display: flex;
 }
 
 .act-image{

@@ -27,17 +27,17 @@ function App() {
           {actress.map((act) => (
             <div
               key={act.id}
-              className="col-12 col-md-6 col-lg-4 col-xl-3">
+              className="col-12 col-md-6 col-lg-4 col-xl-6">
               <div className="card rounded-0 d-flex">
                 <div className="act-image">
                   <img src={act.image} className='img-fluid' alt={act.name} />
                 </div>
                 <div className="act-info">
-                  <h3 className="act-name">{act.name}</h3>
-                  <p className="act-birth-date">{act.birt_date}</p>
-                  <p className="act-nationality">{act.nationality}</p>
-                  <p className="act-bio">{act.biography}</p>
-                  <p className="act-awards">{act.awards}</p>
+                  <p className="act-name"><b>Name: </b>{act.name}</p>
+                  <p className="act-birth-date"><b>Birth Year: </b>{act.birth_year}</p>
+                  <p className="act-nationality"><b>Nationality: </b>{act.nationality}</p>
+                  <p className="act-bio"><b>Biography: </b>{act.biography}</p>
+                  <p className="act-awards"><b>Awards: </b>{act.awards}</p>
                 </div>
               </div>
             </div>
